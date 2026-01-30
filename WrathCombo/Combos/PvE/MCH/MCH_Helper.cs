@@ -33,11 +33,10 @@ internal partial class MCH
                 !IsComboExpiring(6) && !IsOverheated &&
                 DrillCD && AirAnchorCD && ChainSawCD &&
                 !HasStatusEffect(Buffs.ExcavatorReady) &&
-                !HasStatusEffect(Buffs.FullMetalMachinist) &&
                 (ActionReady(Wildfire) ||
                  JustUsed(FullMetalField, GCD / 2) ||
                  MCH_ST_WildfireBossOption == 1 && !TargetIsBoss() ||
-                 GetCooldownRemainingTime(Wildfire) > GCD * 15 ||
+                 GetCooldownRemainingTime(Wildfire) > GCD * 16 ||
                  Heat is 100 && GetCooldownRemainingTime(Wildfire) > 10 ||
                  !LevelChecked(Wildfire)):
 
